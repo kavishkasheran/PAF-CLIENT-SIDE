@@ -151,7 +151,7 @@ if ($("#D_Type").val().trim() == "")
 // Contact number-------------------------------
 if ($("#D_Contact_Number").val().trim() == "")
  {
- return "Insert Contact Number";
+ return "Insert Contact Number Details";
  }
 //Check for numeric value
 var phone = $("#D_Contact_Number").val().trim();

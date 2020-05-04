@@ -62,11 +62,11 @@ public class DoctorApi extends HttpServlet {
               Map paras = getParasMap(request);
 		
 		String output = d1.updateDoctors(paras.get("hidDoctorIDSave").toString(),
-										   paras.get("D_Name").toString(),
-										   paras.get("D_Type").toString(),
+										   paras.get("D_Name").toString().replace('+', ' '),
+										   paras.get("D_Type").toString().replace('+', ' '),
 										   paras.get("D_Contact_Number").toString(),
-										   paras.get("D_Address").toString(),
-										   paras.get("D_Email").toString(),
+										   paras.get("D_Address").toString().replace('+', ' ').replaceAll("%2C",","),
+										   paras.get("D_Email").toString().replaceAll("%40","@"),
 										   paras.get("Hospital_ID").toString());
 		
 		

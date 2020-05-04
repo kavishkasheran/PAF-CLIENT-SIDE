@@ -16,11 +16,56 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type='text/javascript' src='./Components/Doctor1.js'></script>
+  
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.card{
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	margin-top: 15px;
+}
+#btnSave{
+	margin-top: 15px;
+	font-size: px;
+	width: 100%;
+}
+.alert{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	text-align: center;
+}
+
+  </style>
+  
 </head>
 <body>
 
-
-	<form id="formDoctor" name="formDoctor" method="post"  action="Doctor_Insert.jsp">
+<div class="container">
+		<div class="row"><div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="card">
+				<form id="formDoctor" name="formDoctor" method="post"  action="Doctor_Insert.jsp">
 		Doctor name: <input id="D_Name" name="D_Name" type="text" 
 			class="form-control form-control-sm" required > <br> 
 			
@@ -44,6 +89,15 @@
 			
 			<input type="hidden" id="hidDoctorIDSave" name="hidDoctorIDSave" value="">
 	</form>
+	
+	
+	</div>
+</div>
+</div>
+</div>
+
+
+
 	
 	
 	<div id="alertSuccess" class="alert alert-success">
