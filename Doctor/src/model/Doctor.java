@@ -84,7 +84,7 @@ public class Doctor {
 				String Hospital_ID = rs.getString("Hospital_ID");
 				D_Name=D_Name.replace('+', ' ');
 				D_Email=D_Email.replaceAll("%40","@");
-				D_Address=D_Address.replaceAll("%2C",",");
+				D_Address = D_Address.replaceAll("%2C", ",");
 				D_Address=D_Address.replace('+', ' ');
 				
 
