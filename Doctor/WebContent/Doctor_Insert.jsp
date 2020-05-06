@@ -39,15 +39,6 @@ tr:nth-child(even) {
 	background-color: #dddddd;
 }
 
-.card {
-	padding: 20px;
-	border: 1px solid black;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	font-size: 15px;
-	margin-top: 15px;
-}
-
 #btnSave {
 	margin-top: 15px;
 	font-size: px;
@@ -64,9 +55,10 @@ tr:nth-child(even) {
 </style>
 
 </head>
-<body>
+<body style="background: url(images/301819.jpg)">
 
 	<div class="container">
+		<h2 style="margin-left: 424px;">Doctor Management</h2>
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
@@ -105,7 +97,7 @@ tr:nth-child(even) {
 
 
 
-
+	<br>
 
 	<div id="alertSuccess" class="alert alert-success">
 		<%--

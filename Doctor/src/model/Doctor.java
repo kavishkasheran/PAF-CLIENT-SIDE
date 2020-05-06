@@ -36,26 +36,20 @@ public class Doctor {
 //execute the statement
 
 			preparedStmt.execute();
-			/*con.close();
-			output = "Inserted successfully created ";
-		} catch (Exception e) {
-			output = "Error while inserting the doctor.";
-			System.err.println(e.getMessage());
-		}
-		return output;*/
-       con.close();
-			
+			/*
+			 * con.close(); output = "Inserted successfully created "; } catch (Exception e)
+			 * { output = "Error while inserting the doctor.";
+			 * System.err.println(e.getMessage()); } return output;
+			 */
+			con.close();
+
 			String newDoctors = readDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			output = "{\"status\":\"error\", \"data\": \"Error while inserting the Doctor.\"}";
 			System.err.println(e.getMessage());
 		}
-		
-		
-		
+
 		return output;
 	}
 
@@ -82,11 +76,10 @@ public class Doctor {
 				String D_Address = rs.getString("D_Address");
 				String D_Email = rs.getString("D_Email");
 				String Hospital_ID = rs.getString("Hospital_ID");
-				D_Name=D_Name.replace('+', ' ');
-				D_Email=D_Email.replaceAll("%40","@");
+				D_Name = D_Name.replace('+', ' ');
+				D_Email = D_Email.replaceAll("%40", "@");
 				D_Address = D_Address.replaceAll("%2C", ",");
-				D_Address=D_Address.replace('+', ' ');
-				
+				D_Address = D_Address.replace('+', ' ');
 
 				// Add into the html table
 				output += "<tr><td><input id=\'hidDoctorIDUpdate\'name=\'hidDoctorIDUpdate\'type=\'hidden\' value=\'"
@@ -97,15 +90,19 @@ public class Doctor {
 				output += "<td>" + D_Email + "</td>";
 				output += "<td>" + Hospital_ID + "</td>";
 // buttons
-				/*output += "<td><input name=\"btnUpdate\" type=\"button\"value=\"Update\" class=\"btn btn-warning btnUpdate\"></td>"
-						+ "<td><form method=\"post\" action=\"Doctor_Insert.jsp\">"
-						+ "<input name=\"btnRemove\" type=\"submit\" value=\"Remove\"class=\"btn btn-danger\">"
-						+ "<input name=\"hidDoctorIDDelete\" type=\"hidden\" value=\"" + Doctor_ID + "\">"
-						+ "</form></td></tr>";*/
+				/*
+				 * output +=
+				 * "<td><input name=\"btnUpdate\" type=\"button\"value=\"Update\" class=\"btn btn-warning btnUpdate\"></td>"
+				 * + "<td><form method=\"post\" action=\"Doctor_Insert.jsp\">" +
+				 * "<input name=\"btnRemove\" type=\"submit\" value=\"Remove\"class=\"btn btn-danger\">"
+				 * + "<input name=\"hidDoctorIDDelete\" type=\"hidden\" value=\"" + Doctor_ID +
+				 * "\">" + "</form></td></tr>";
+				 */
 				output += "<td><input name='btnUpdate'type='button' "
-						+ "value='Update'class='btnUpdate btn btn-secondary'></td>"
+						+ "value='Update'class='btnUpdate btn btn-success'></td>"
 						+ "<td><input name='btnRemove'type='button' "
-						+ "value='Remove'class='btnRemove btn btn-danger'data-itemid='"+ Doctor_ID + "'>" + "</td></tr>";
+						+ "value='Remove'class='btnRemove btn btn-danger'data-itemid='" + Doctor_ID + "'>"
+						+ "</td></tr>";
 			}
 			con.close();
 //Complete the html table
@@ -138,26 +135,20 @@ public class Doctor {
 			preparedStmt.setInt(7, Integer.parseInt(ID));
 			// execute the statement
 			preparedStmt.execute();
-			/*con.close();
-			output = "Updated successfully done";
-		} catch (Exception e) {
-			output = "Error while updating the doctor.";
-			System.err.println(e.getMessage());
-		}
-		return output;
-	}
-	*/
-con.close();
-			
+			/*
+			 * con.close(); output = "Updated successfully done"; } catch (Exception e) {
+			 * output = "Error while updating the doctor.";
+			 * System.err.println(e.getMessage()); } return output; }
+			 */
+			con.close();
+
 			String newDoctors = readDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			output = "{\"status\":\"error\", \"data\": \"Error while updating the Doctor.\"}";
 			System.err.println(e.getMessage());
 		}
-		
+
 		return output;
 	}
 
@@ -175,26 +166,21 @@ con.close();
 			preparedStmt.setInt(1, Integer.parseInt(Doctor_ID));
 // execute the statement
 			preparedStmt.execute();
-			/*con.close();
-			output = "Deleted successfully";
-		} catch (Exception e) {
-			output = "Error while deleting the doctor.";
-			System.err.println(e.getMessage());
-		}
-		return output;
-	}*/
-con.close();
-			
+			/*
+			 * con.close(); output = "Deleted successfully"; } catch (Exception e) { output
+			 * = "Error while deleting the doctor."; System.err.println(e.getMessage()); }
+			 * return output; }
+			 */
+			con.close();
+
 			String newDoctors = readDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctors + "\"}";
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			output = "{\"status\":\"error\", \"data\": \"Error while deleting the Doctor.\"}";
 			System.err.println(e.getMessage());
 		}
-		
+
 		return output;
-	}		
+	}
 
 }

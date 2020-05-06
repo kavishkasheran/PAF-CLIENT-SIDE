@@ -117,7 +117,7 @@ function validateDoctorForm() {
 
 	// Doctor name
 	if ($("#D_Name").val().trim() == "") {
-		return "Insert  Doctor Name.......";
+		return "Insert  Doctor Name....";
 	}
 	// Doctor type
 	if ($("#D_Type").val().trim() == "") {
